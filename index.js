@@ -67,3 +67,12 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 })();
 
 client.login(process.env.TOKEN);
+
+// Empêche les crashs dus à des erreurs non gérées
+process.on('unhandledRejection', (reason, promise) => {
+  console.log('⚠️ Rejet non géré :', reason);
+});
+process.on('uncaughtException', (err) => {
+  console.error('💥 Erreur non capturée :', err);
+});
+
