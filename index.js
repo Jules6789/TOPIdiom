@@ -76,3 +76,9 @@ process.on('uncaughtException', (err) => {
   console.error('💥 Erreur non capturée :', err);
 });
 
+// Empêche Render d'arrêter le bot
+const express = require('express');
+const app = express();
+app.get('/', (req, res) => res.send('Bot en ligne 🟢'));
+app.listen(3000, () => console.log('Serveur keep-alive pour Render démarré.'));
+
