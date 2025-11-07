@@ -1,19 +1,15 @@
 {
   "name": "topidiom",
   "version": "1.0.0",
-  "description": "Bot Discord anonyme slash /écrire (texte + images)",
+  "description": "Bot Discord anonyme pour le serveur de langues TopIdiom",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "discord.js": "^14.11.0",
-    "dotenv": "^16.3.1"
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
   }
-}
-
-"dependencies": {
-  "discord.js": "^14.13.0",
-  "express": "^4.18.2"
 }
